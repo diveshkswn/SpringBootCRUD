@@ -46,4 +46,11 @@ public class mainController {
 		EmployeeBean eb=service.getEmployeeById(id);
 		return eb;
 	}
+	
+	@GetMapping("updateEmployee/{ids}/{names}")
+	public String updateEmployeeById(@PathVariable(name="ids")int id,@PathVariable(name="names") String name) {
+		System.out.println(id+name);
+		return service.updateEmployee(id, name);
+		
+	}
 }

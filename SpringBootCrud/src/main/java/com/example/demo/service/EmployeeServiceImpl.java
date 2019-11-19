@@ -41,6 +41,18 @@ public class EmployeeServiceImpl implements EmployeeService{
 		
 		return eb;
 	}
+	@Override
+	public String updateEmployee(int id, String name) {
+		// TODO Auto-generated method stub
+		Optional<EmployeeEntity> ee=dao.findById(id);
+		EmployeeEntity empee=ee.get();
+		EmployeeBean eb=new EmployeeBean();
+		//eb.setId(empee.getId());
+		//eb.setName(name);
+		empee.setName(name);
+		dao.save(empee);
+		return "Updated Successfully";
+	}
 	
 
 	

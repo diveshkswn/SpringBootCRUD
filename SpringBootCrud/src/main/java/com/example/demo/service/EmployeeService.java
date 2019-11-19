@@ -10,4 +10,6 @@ public interface EmployeeService {
 	
 	
 	public EmployeeBean getEmployeeById(int id);
+	
+	public String updateEmployee(int id,String name);
 }
