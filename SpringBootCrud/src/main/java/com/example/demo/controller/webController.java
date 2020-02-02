@@ -41,7 +41,7 @@ public class webController {
 	public ModelAndView addEmployeePage() {
 		ModelAndView mv=new ModelAndView();
 		mv.addObject("addemp", new EmployeeBean());
-		mv.setViewName("AddEmployee");
+		mv.setViewName("AddEmployee2");
 		
 		return mv;
 	}
@@ -52,7 +52,7 @@ public class webController {
 		System.out.println(service.addEmployee(eb));
 		
 		ModelAndView mv=new ModelAndView();
-		mv.setViewName("AddEmployee");
+		mv.setViewName("AddEmployee2");
 		mv.addObject("success", "Employee Added Successfully");
 		return mv;
 	}
