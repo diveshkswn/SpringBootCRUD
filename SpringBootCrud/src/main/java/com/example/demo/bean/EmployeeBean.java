@@ -11,6 +11,10 @@ public class EmployeeBean {
 	private String name;
 	
 	
+	@Override
+	public String toString() {
+		return "EmployeeBean [id=" + id + ", name=" + name + "]";
+	}
 	public EmployeeBean() {
 	//	super();
 	}

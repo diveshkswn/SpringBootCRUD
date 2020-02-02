@@ -53,6 +53,35 @@ public class EmployeeServiceImpl implements EmployeeService{
 		dao.save(empee);
 		return "Updated Successfully";
 	}
+	@Override
+	public List<EmployeeEntity> range(int id1, int id2) {
+		// TODO Auto-generated method stub
+		List<EmployeeEntity>li=dao.rangeId(id1, id2);
+		return li;
+	}
+	@Override
+	public String addEmployee(EmployeeBean eb) {
+		// TODO Auto-generated method stub
+		System.out.println(eb);
+		EmployeeEntity ee=new EmployeeEntity();
+		BeanUtils.copyProperties(eb, ee);
+		dao.save(ee);
+		return "Success";
+	}
+	@Override
+	public String addEmployeeList(List<EmployeeBean> empli) {
+		// TODO Auto-generated method stub
+		List<EmployeeEntity>eeli=new ArrayList<EmployeeEntity>();
+		
+		for(EmployeeBean eb: empli) {
+			EmployeeEntity ee=new EmployeeEntity();
+			BeanUtils.copyProperties(eb, ee);
+			eeli.add(ee);
+		}
+		dao.saveAll(eeli);
+		
+		return "Success";
+	}
 	
 
 	
