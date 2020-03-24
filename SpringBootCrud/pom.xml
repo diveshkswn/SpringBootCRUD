@@ -20,7 +20,7 @@
 	</properties>
 
 	<dependencies>
-	
+	<!-- below 2 dependencies are for jstl -->
  <dependency>
      <groupId>jstl</groupId>
      <artifactId>jstl</artifactId>
